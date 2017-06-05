@@ -27,20 +27,22 @@ public class Movie {
 
     @SerializedName("overview")
     @Expose
-    private String moverview;
+    private String mOverview;
 
-    private String mSynopsis;
+    @SerializedName("poster_path")
+    @Expose
+    private String mPosterPath;
 
     public Movie() {
     }
 
-    public Movie(String title, Double voteAverage, long voteCount, String releaseDate, String moverview, String synopsis) {
+    public Movie(String title, Double voteAverage, long voteCount, String releaseDate, String overview, String posterPath) {
         mTitle = title;
         mVoteAverage = voteAverage;
         mVoteCount = voteCount;
         mReleaseDate = releaseDate;
-        this.moverview = moverview;
-        mSynopsis = synopsis;
+        mOverview = overview;
+        mPosterPath = posterPath;
     }
 
     public String getTitle() {
@@ -75,20 +77,20 @@ public class Movie {
         mReleaseDate = releaseDate;
     }
 
-    public String getMoverview() {
-        return moverview;
+    public String getOverview() {
+        return mOverview;
     }
 
-    public void setMoverview(String moverview) {
-        this.moverview = moverview;
+    public void setOverview(String overview) {
+        mOverview = overview;
     }
 
-    public String getSynopsis() {
-        return mSynopsis;
+    public String getPosterPath() {
+        return mPosterPath;
     }
 
-    public void setSynopsis(String synopsis) {
-        mSynopsis = synopsis;
+    public void setPosterPath(String posterPath) {
+        mPosterPath = posterPath;
     }
 
     @Override
@@ -98,8 +100,8 @@ public class Movie {
                 ", mVoteAverage=" + mVoteAverage +
                 ", mVoteCount=" + mVoteCount +
                 ", mReleaseDate='" + mReleaseDate + '\'' +
-                ", moverview='" + moverview + '\'' +
-                ", mSynopsis='" + mSynopsis + '\'' +
+                ", mOverview='" + mOverview + '\'' +
+                ", mPosterPath='" + mPosterPath + '\'' +
                 '}';
     }
 }
