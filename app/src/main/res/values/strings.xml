@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Zarsuelo Test App</string>
+
+    <!--API - List of movies with page number-->
+    <string name="api_movies">https://api.themoviedb.org/3/discover/movie?api_key=%1$s&amp;page=%2$s</string>
+
+    <!--API - Specific movie by movie id-->
+    <string name="api_movie">https://api.themoviedb.org/3/movie/%2$s?api_key=%1$s</string>
 </resources>
