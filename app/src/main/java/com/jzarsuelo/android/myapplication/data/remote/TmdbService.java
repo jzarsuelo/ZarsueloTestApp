@@ -11,9 +11,9 @@ import retrofit2.http.Query;
  */
 
 public interface TmdbService {
-    @GET("/discover/movie")
-    Call<MoviesApiResponse> getMovies(@Query("api_key") String apiKey, @Query("page") String page);
+    @GET("/3/discover/movie")
+    Call<MoviesApiResponse> getMovies(@Query("api_key") String apiKey, @Query("page") int page);
 
-    @GET("/discover/movie/{movie_id}")
+    @GET("/3/discover/movie/{movie_id}")
     Call<MoviesApiResponse> getMovie(@Query("api_key") String apiKey, @Query("movie_id") String movieId);
 }

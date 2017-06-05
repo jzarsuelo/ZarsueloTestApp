@@ -26,4 +26,46 @@ public class MoviesApiResponse {
     @SerializedName("total_pages")
     @Expose
     private Long mTotalPages;
+
+    public MoviesApiResponse() {
+    }
+
+    public MoviesApiResponse(Long page, List<Movie> movies, Long totalResults, Long totalPages) {
+        mPage = page;
+        mMovies = movies;
+        mTotalResults = totalResults;
+        mTotalPages = totalPages;
+    }
+
+    public Long getPage() {
+        return mPage;
+    }
+
+    public void setPage(Long page) {
+        mPage = page;
+    }
+
+    public List<Movie> getMovies() {
+        return mMovies;
+    }
+
+    public void setMovies(List<Movie> movies) {
+        mMovies = movies;
+    }
+
+    public Long getTotalResults() {
+        return mTotalResults;
+    }
+
+    public void setTotalResults(Long totalResults) {
+        mTotalResults = totalResults;
+    }
+
+    public Long getTotalPages() {
+        return mTotalPages;
+    }
+
+    public void setTotalPages(Long totalPages) {
+        mTotalPages = totalPages;
+    }
 }

@@ -2,7 +2,8 @@
     <string name="app_name">Zarsuelo Test App</string>
 
     <!--API - Specific movie by movie id-->
-    <string name="tmdb_base_url">https://api.themoviedb.org/3/</string>
+    <!--<string name="tmdb_base_url">http://api.themoviedb.org/3/</string>-->
+    <string name="tmdb_base_url">http://api.themoviedb.org</string>
 
     <string name="tmdb_poster_base_url">https://image.tmdb.org/t/p/w185_and_h278_bestv2%1$s</string>
 </resources>
