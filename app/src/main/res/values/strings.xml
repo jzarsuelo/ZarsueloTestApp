@@ -6,4 +6,5 @@
     <string name="tmdb_base_url">http://api.themoviedb.org</string>
 
     <string name="tmdb_poster_base_url">https://image.tmdb.org/t/p/w185_and_h278_bestv2%1$s</string>
+    <string name="error_no_connection">Check network connection.</string>
 </resources>
