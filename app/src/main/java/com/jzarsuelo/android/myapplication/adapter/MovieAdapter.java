@@ -2,6 +2,7 @@ package com.jzarsuelo.android.myapplication.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,8 @@ import butterknife.ButterKnife;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
+    private static final String LOG_TAG = MovieAdapter.class.getSimpleName();
+
     private List<Movie> mMovieList;
 
     public MovieAdapter(List<Movie> movieList) {
@@ -43,6 +46,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+
         holder.bindView(holder, mMovieList.get(position) );
     }
 
@@ -75,6 +79,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             super(itemView);
 
             ButterKnife.bind(this, itemView);
+            itemView.setOnClickListener(this);
         }
 
         /**
@@ -93,6 +98,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         @Override
         public void onClick(View v) {
             // TODO navigate to MovieActivity
+            Log.d(LOG_TAG, "navigate to MovieActivity:" + getAdapterPosition());
         }
     }
 }
